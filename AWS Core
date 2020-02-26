@@ -1,1 +1,225 @@
 
+Our fromt page lf scroll down a
+littie bit you can see this sectior
+called Explore Our Products and it
+places all of the produdts arnd
+services into diterent categorie For
+eKampie if icick Eompute can see
+Armazon EC2 as the first on the list
+Dut a lotof other produtts and
+show up in thE Comi
+Category
+If I were to click Amazon1
+EC2 mair page which happeIS to
+have the URE
+upaws.anazon.com. EL2
+gives you kind of an openng
+more detailed deScription, and it
+lists some of the benefits
+Additionaly, along this rOW, we can
+See product details, instance types
+pricing, getting started, frequenty
+ed qustions, and other
+resources. If I click Product
+Detais, you get some more
+information about Amazon EC2
+functionality. I'mgoing to go back
+to that front page and click
+Storage, and under Storage we
+can see Amazon S Amazon EBS
+and so forth. Lot of other storage
+options would appear here.
+Under Database we can sSe
+a, Anazon RDS Amazo
+DynamoDB Amazon Redshift, and
+some oi the other options I we
+want to fnd Amazon VPCit actually
+shows up under Compute because
+it is a required componentin orde
+to isolate your compute resources.
+and it shows up under Networking
+&Content Delivery we gO to
+Security, Identity, &
+Compliance, we can see AWS
+dentity & ACcess Management
+lm dicking on that which can give
+US sOme moCniormauon here
+What ld like to do now is talk about
+documentation, and this is really
+well documented. 1 can scroll up to
+the top and instead of exploring the
+products, we can go rightinto more
+documentation. We can get end
+User doCumentation for any
+product fyou notice have not
+logged in to the console So l'm
+accessing this just as a publicuser
+Amazon EC2, and you have all the
+documentation, User quide for
+Linux, for Windows Ne API
+reference, the AVWS CLI reference.
+This is fantasticstuff here, and this
+is going to be available for most
+anything that we have. So now in
+the documentation, I can select
+Products, Storage, s3
+Documentation such as Getting
+Started Guide, Developer Guide, and
+SO forth
+
+
+
+The AWS doud offers pay as you
+go, on -demand compute as well as
+managed services all accessible via
+he web. lhese compute resources
+and services must be acessible via
+normal 1P protOCols implemented
+with familiar network structures
+Customers need to adhere to
+networking best practices as well aS
+meet regulatory and organizationa
+requirements. Amazon Virtual
+Private Cloud, or VPC, is the
+networking AWS service that will
+meet your networking requirements.
+Amazon VPC allows you to createa
+private network within the AWS
+Cloud that uses many of the samne
+Concepts and constructs as an onn-
+premises network but as we shall
+see later, mudh ol the complexity of
+Setting up a neEwork has been
+abstracted without sacinene
+Control security and usablity
+Amazon VPCalsO gives you
+complete controt af the network
+Configuraton tustomersan defne
+normal networking configuration
+items such as IP address spaces
+subnets, and routing tables. This
+allows you to control what you
+expose to the internet and what you
+ISolate Within the Amazon VPC You
+Can deploy your Amazon VPC in a
+way to layer security controls in the
+network. This includes isolating
+Subnets, defining accesS contropl
+ists, and customizing routing rLles.
+YOu have complete control to allow
+and deny both incoming and
+Outgoing traiic. Finally, there are
+numerous AWS services that deploy
+into your Amazon VPC that then
+inherit and take advantage of the
+Security hat you have built into
+your coud network
+Amazon VPCis an Aws
+foundational service and integrat
+numerouS AWS Services. For
+With
+instance Amazon Elastic Cloud
+Compute 1Amazon EC2instances
+are deptoyed into your Amazorn
+VPC Similarly Amazon Relational
+Database Service (Anazon RDS
+database instances deploy into your
+VPC, where the database is
+protected by the structure of the
+netwaTK justlke your on-premises
+network. Understanding and
+mplementing
+allow you to fuily use other AWS
+services.
+Aa2on VPC will
+Let's take a look at the features of
+Amazon VPC Amazon VPC builds
+Lpon the AS global infrastucture
+of Reqions and Avaitabiliv Zone
+and alows you to easiy take
+advantage of the hiqh availability
+provided by the AWS doud. Amazon
+VPCS live within regions and can
+span acrOss muitiple Avaitability
+Zones Each AWS account can create
+multipte VPCS that can be uUsed to
+Segregate environmentL AVPO
+defines an P address space that is
+then divided by subrets These
+subnets are denloved within
+Avaitabiliby žones, causing the VPe
+tO Span Avalablit Zones
+Yau can create many subnets in a
+VPC though fewer is recommended
+to limit the complexity of the
+netwok topology, but this is totally
+up to yOu. You an configure route
+tables for your Subnets to control
+the traffic between subnets and the
+Internet By default all Subnets
+wiETnaVPeaan communicate with
+each other Subnets are generaly
+dassihed as pubic or private with
+pubic having direct access to thg
+internet and private nothaving
+direct access to the internet for a
+subnet to be public we need to
+attach an internet gateway to the
+VPCand update the route table of
+the public subnet to send non tOcal
+traffic to the internet gateway
+Amazon EC2 instances also need a
+Dubic IP address to route to an
+Internet gateway
+Lets design an example Amazon
+VPC that we can use to start
+deploying compute resources and
+AWS services. VWe'll create a network
+hat supports ihigh avalability and
+USes nnultiple Subnets
+Frst since VP or region based, we
+need to selectareqion. I've selected
+the Oregon Region Next Ill create
+the VPC l give ita nanme, Test VPC
+and lu defne the P address space
+for the VPC The 10.0.0.0/16 is the
+CassieSs interdomain routing (CIDR
+Jorma ana npans inat l have aver
+65 000 IP addresses to use in the
+VPC Next I create a subnet named
+SuonetAL Ihave assicned an IP
+address Space thaNontarns 256 P
+aderesses Aso 1spedy hat ths
+Subnet wll ive in an Availabiity
+Zone A
+Next Icreated another sub net
+called Subnet B1 assign an
+addresS Space but this contains 512
+Paddresses. Ive added an ntemet
+gateway called Test lGW Subnet A1
+wil become a publicsubnet where
+non-local traffic is routed through
+the internet gateway SubnetB1 will
+be our private Subnet that is isolated
+from the lnternetw
+Lets sunmaie What we havVe
+acomDiSIedand review some next
+steps. We have learned about how
+to create VPCs, Internet gateways,
+and subnes Next steps induae
+earnin about other VPC features
+Such as routing tabtes VPE
+annd peerig connections.
+endpoinis,
+Aso, yOU Caln learn abOut depioving
+AWSTEsources nto vour VPC More
+nformaion is available at
+AWS.amazon.com/vPCThope you
+learned a little somethinq and will
+Continue to explore other videos. Im
+Kent Rademacher with AWS Training
+and Certification. Thanks for
+watching.
+
+
+
